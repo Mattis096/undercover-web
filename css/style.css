@@ -20,15 +20,115 @@ body {
 
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, var(--primary), #8bbf5a);
+    background: linear-gradient(to top, var(--primary) 0%, #2d3d1d);
     color: white;
-    padding: 80px 20px;
+    padding: 80px 60px;
     text-align: center;
 }
+
+.hero-texture {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 42px; /* ajuste selon la taille de ton image */
+    background-image: url('../images/paper-torn-bottom-white.webp'); /* ton image PNG de papier déchiré */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    pointer-events: none; /* pour que le bouton reste cliquable */
+    z-index: 1; /* au-dessus du fond mais sous le texte et le bouton */
+}
+
+.hero h1 {
+    font-size: 4rem;
+}
+
+.hero-infos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 35px 0;
+    flex-wrap: wrap;
+}
+
+.hero-info {
+    text-align: center;
+    color: white;
+    max-width: 220px;
+}
+
+.hero-icon {
+    width: 50px;     
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-info strong {
+    display: block;
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.hero-info strong {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.hero .btn.reveal {
+    transition-delay: 0.4s; /* apparait 0.4s après le texte */
+}
+
 
 .logo {
     width: 110px;
     margin-bottom: 20px;
+}
+
+/* DISCOVER SECTION */
+.discover {
+    padding: 70px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.discover h3 {
+    color: var(--primary);
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.4rem;          /* plus gros */
+    letter-spacing: 1.5px;     /* effet premium */
+    margin-bottom: 8px;
+}
+
+.discover h2 {
+    color: #000;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 2.6rem;         /* bien plus gros */
+    line-height: 1.15;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.discover p {
+    font-size: 1.15rem;        /* texte plus lisible */
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.discover-img {
+    display: block;
+    margin: 0 auto 35px;       /* centre horizontalement */
+    max-width: 420px;          /* adapte selon ton image */
+    width: 100%;
+    border-radius: 16px;       /* coins doux */
+    border: 4px solid white;   /* contour net */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25); /* ombrage élégant */
 }
 
 /* SECTIONS */
@@ -49,6 +149,101 @@ body {
     margin: auto;
 }
 
+.paper {
+    background-image: url('../images/paper-texture.jpg'); /* ton image de papier froissé */
+    background-size: cover;       /* couvre toute la section */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 70px 20px;
+    color: var(--text);
+    border-radius: 12px;          /* optionnel : coins arrondis */
+    position: relative;           /* utile si overlay plus tard */
+    z-index: 0;
+}
+
+.regles {
+    background: var(--primary);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 70px 20px;
+    margin: auto;
+}
+
+.regles h3 {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.4rem;          /* plus gros */
+    letter-spacing: 1.5px;     /* effet premium */
+    margin-bottom: 8px;
+}
+
+.regles h2 {
+    color: white;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 3rem;         /* bien plus gros */
+    letter-spacing: 1px;
+}
+
+.regles::before,
+.regles::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    pointer-events: none;
+}
+
+.regles::before {
+    top: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0)
+    );
+}
+
+.regles::after {
+    bottom: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0)
+    );
+}
+
+.regles-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 20px;
+}
+
+.regles-text {
+    flex: 1;
+    text-align: left;
+}
+
+.regles-image {
+    flex: 1;
+    text-align: center;
+}
+
+.regles-image img {
+    max-width: 320px;
+    width: 100%;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+}
+
+
+
 /* ROLES */
 .roles {
     display: flex;
@@ -63,7 +258,7 @@ body {
     padding: 25px;
     flex: 1;
     min-width: 250px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
 }
 
@@ -81,6 +276,7 @@ body {
     border-radius: 30px;
     text-decoration: none;
     margin-top: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .btn:hover {
@@ -137,11 +333,10 @@ footer {
     top: 0;
     background: white;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .nav-container {
-    max-width: 1100px;
     margin: auto;
     padding: 12px 20px;
     display: flex;
@@ -155,10 +350,11 @@ footer {
     gap: 10px;
     font-weight: bold;
     color: var(--primary);
+    font-size: 1.5rem;
 }
 
 .nav-logo img {
-    width: 36px;
+    width: 64px;
 }
 
 /* NAV LINKS */
@@ -172,7 +368,7 @@ footer {
 .nav-links a {
     text-decoration: none;
     color: var(--text);
-    font-weight: 500;
+    font-weight: 1000;
 }
 
 .nav-links a:hover {
@@ -184,6 +380,7 @@ footer {
     color: white !important;
     padding: 8px 18px;
     border-radius: 20px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
 }
 
 /* MENU MOBILE */
@@ -236,3 +433,70 @@ footer {
 .role:hover .role-img {
     transform: scale(1.1);
 }
+
+
+.card-carousel {
+    position: relative;
+    width: 260px;
+    margin: auto;
+}
+
+.card-stack {
+    position: relative;
+    height: 360px;
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+/* carte visible */
+.card.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+/* cartes dessous (effet pile) */
+.card:nth-child(2) {
+    transform: translateY(14px) scale(0.96);
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.card:nth-child(3) {
+    transform: translateY(28px) scale(0.92);
+    opacity: 0.35;
+    z-index: 1;
+}
+
+/* FLÈCHES */
+.card-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.arrow {
+    background: white;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
+

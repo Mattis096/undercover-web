@@ -5,7 +5,7 @@
     <title>Undercover – Jeu de société mobile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="image/logo.png">
+    <link rel="icon" type="images/png" href="images/logo.png">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
     <div class="nav-container">
 
         <div class="nav-logo">
-            <img src="image/logo.png" alt="Logo">
+            <img src="images/logo.png" alt="Logo">
             <span>Undercover</span>
         </div>
 
@@ -24,7 +24,7 @@
             <li><a href="terms-conditions.html">Conditions d’utilisation</a></li>
             <li><a href="contact-us.html">Contact</a></li>
             <li>
-                <a href="https://play.google.com/store" target="_blank" class="nav-btn">
+                <a href="https://play.google.com/store/apps/details?id=fr.mattis.undercover" target="_blank" class="nav-btn">
                     Télécharger
                 </a>
             </li>
@@ -35,62 +35,115 @@
 </nav>
 
 <header class="hero reveal">
-    <img src="image/logo.png" alt="Logo du jeu" class="logo">
-    <h1>Undercover, un jeu de déduction pour 3-20 joueurs</h1>
-    <p>Plongez dans un jeu captivant où plus personne ne sait qui est qui. Chaque joueur reçoit un mot secret : à vous de décrypter les indices, retrouver vos alliés et démasquer les imposteurs avant qu’il ne soit trop tard.
-        <br><br>Le jeu idéal pour mettre l’ambiance lors de vos apéros, dîners ou soirées festives. Rires, suspense et rebondissements garantis, en famille comme entre amis !</p>
-    <a href="https://play.google.com/store" target="_blank" class="btn pulse">
+    <h1>Undercover, le jeu pour s’amuser en soirée</h1>
+
+   <div class="hero-infos">
+        <div class="hero-info">
+            <img src="images/icon-soiree.png" alt="Soirées" class="hero-icon">
+            <strong>Idéal pour des soirées de folie</strong>
+        </div>
+
+        <div class="hero-info">
+            <img src="images/icon-regles.png" alt="Règles simples" class="hero-icon">
+            <strong>Des règles simples, à partir de 10 ans</strong>
+        </div>
+
+        <div class="hero-info">
+            <img src="images/icon-mots.svg" alt="Mots différents" class="hero-icon">
+            <strong>Plus de 300 mots différents</strong>
+        </div>
+    </div>
+
+    <a href="https://play.google.com/store/apps/details?id=fr.mattis.undercover" target="_blank" class="btn pulse reveal">
         Télécharger sur le Play Store
     </a>
+    <div class="hero-texture"></div>
 </header>
 
-<section class="section reveal" id="regles">
-    <h2>Les règles du jeu</h2>
-    <p class="center">
-        Chaque joueur reçoit un rôle secret...
-    </p>
+<section class="paper">
+    <section class="discover reveal">
+        <img src="images/ton-image.png" alt="Illustration Undercover" class="discover-img">
+        <h3>Découvrez Undercover</h3>
+        <h2>Le jeu de bluff et de déduction</h2>
+        <p>Undercover est une version mobile du célèbre jeu de société&nbsp;!
+        Joue entre amis et découvre qui est l'Undercover ou Mr. White avant qu'il ne te démasque.</p>
+    </section>
+</section>
+
+<section class="regles" id="regles">
+    <div class="regles-content">
+        <div class="regles-text">
+            <h3>Le principe de l'Undercover</h3>
+            <h2>Des règles super simples</h2>
+            <p>
+                Recevez un mot secret et démasquez les Undercover qui se cachent parmi les Civils !
+                Êtes-vous vous-même Undercover ou Mr. White ? Ne vous faites pas repérer...
+            </p>
+        </div>
+
+        <div class="regles-image">
+        <div class="card-carousel">
+            <div class="card-stack">
+                <img src="images/card1.png" class="card active">
+                <img src="images/card2.png" class="card">
+                <img src="images/card3.png" class="card">
+                <img src="images/card4.png" class="card">
+            </div>
+
+            <div class="card-controls">
+                <button class="arrow left">◀</button>
+                <button class="arrow right">▶</button>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
 </section>
 
 
-<section class="section reveal" id="roles">
-    <h2>Les rôles</h2>
+<section class="paper">
+    <section class="section reveal" id="roles">
+        <h2>Les rôles</h2>
 
-    <div class="roles">
-        <div class="role reveal">
-            <img src="images/role-civil.png" alt="Rôle Civils" class="role-img">
-            <h3>Les Civils</h3>
-            <p>
-                <strong>But : </strong> Les Civils gagne si tous les Undercovers et le Mr. White ont été éliminés
-            </p>
+        <div class="roles">
+            <div class="role reveal">
+                <img src="images/role-civil.png" alt="Rôle Civils" class="role-img">
+                <h3>Les Civils</h3>
+                <p>
+                    <strong>But : </strong> Les Civils gagne si tous les Undercovers et le Mr. White ont été éliminés
+                </p>
+            </div>
+
+            <div class="role reveal">
+                <img src="images/role-undercover.png" alt="Rôle Undercover" class="role-img">
+                <h3>Les Undercovers</h3>
+                <p>
+                    <strong>But : </strong> Les Undercovers gagne si l'un d'eux ne s'est pas fait éliminer
+                </p>
+            </div>
+
+            <div class="role reveal">
+                <img src="images/role-white.png" alt="Rôle Mr. White" class="role-img">
+                <h3>Mr. White</h3>
+                <p>
+                    <strong>But : </strong> Mr. White gagne s'il a deviné le mot secret des civils ou s'il n'a pas été éliminé
+                </p>
+            </div>
+        </div>
+        <div class="center">
+            <a href="how-to-play.html" class="btn">
+                Règles détaillées
+            </a>
         </div>
 
-        <div class="role reveal">
-            <img src="images/role-undercover.png" alt="Rôle Undercover" class="role-img">
-            <h3>Les Undercovers</h3>
-            <p>
-                <strong>But : </strong> Les Undercovers gagne si l'un d'eux ne s'est pas fait éliminer
-            </p>
-        </div>
-
-        <div class="role reveal">
-            <img src="images/role-white.png" alt="Rôle Mr. White" class="role-img">
-            <h3>Mr. White</h3>
-            <p>
-                <strong>But : </strong> Mr. White gagne s'il a deviné le mot secret des civils ou s'il n'a pas été éliminé
-            </p>
-        </div>
-    </div>
-     <div class="center">
-        <a href="how-to-play.html" class="btn">
-            Règles détaillées
-        </a>
-    </div>
+    </section>
 </section>
 
 <footer>
     <div class="footer-download reveal">
         <h3>Prêt à jouer ?</h3>
-        <a href="https://play.google.com/store" target="_blank" class="btn">
+        <a href="https://play.google.com/store/apps/details?id=fr.mattis.undercover" target="_blank" class="btn">
             Télécharger l’application
         </a>
     </div>
