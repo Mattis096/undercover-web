@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f1220;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  color: #ff4d6d;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #ffd166;
+}
+
+p {
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.updated {
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+.contact {
+  font-weight: bold;
+  margin-top: 10px;
+}
