@@ -166,7 +166,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
-    padding: 70px 20px;
+    padding: 0px 20px;
     margin: auto;
 }
 
@@ -239,7 +239,7 @@ body {
 .regles-image img {
     max-width: 320px;
     width: 100%;
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 40px 60px rgba(0,0,0,0.5));
 }
 
 
@@ -304,6 +304,19 @@ footer {
 .footer-links a:hover {
     text-decoration: underline;
 }
+
+.footer-download {
+    display: flex;              /* active Flexbox */
+    flex-direction: column;     /* empile les éléments verticalement */
+    align-items: center;        /* centre horizontalement */
+    justify-content: center;    /* centre verticalement si tu veux hauteur définie */
+    text-align: center;         /* assure que le texte est centré */
+    gap: 20px;                  /* espace entre le titre et le bouton */
+    padding: 50px 20px;         /* garde un peu d’espace autour */
+    background: var(--primary); /* optionnel : fond si tu veux */
+    color: white;               /* texte blanc */
+}
+
 
 /* ANIMATIONS */
 .reveal {
@@ -434,50 +447,61 @@ footer {
     transform: scale(1.1);
 }
 
-
 .card-carousel {
     position: relative;
-    width: 260px;
+    width: 360px;
     margin: auto;
 }
 
 .card-stack {
     position: relative;
-    height: 360px;
+    height: 480px;
 }
 
 .card {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    inset: 0;
+    background: linear-gradient(135deg, #000000, #424242);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
     transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0;
 }
 
-/* carte visible */
 .card.active {
     transform: translateY(0) scale(1);
     opacity: 1;
     z-index: 3;
 }
 
-/* cartes dessous (effet pile) */
 .card:nth-child(2) {
     transform: translateY(14px) scale(0.96);
-    opacity: 0.6;
+    opacity: 0.65;
     z-index: 2;
 }
 
 .card:nth-child(3) {
     transform: translateY(28px) scale(0.92);
-    opacity: 0.35;
+    opacity: 0.4;
     z-index: 1;
 }
 
-/* FLÈCHES */
+.card-title {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
 .card-controls {
     display: flex;
     justify-content: space-between;
@@ -486,17 +510,148 @@ footer {
 
 .arrow {
     background: white;
+    color: var(--primary);
     border: none;
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 40px;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     transition: transform 0.2s ease;
+    font-weight: bold;
 }
 
 .arrow:hover {
     transform: scale(1.1);
+}
+
+/* Mini-cartes dans les cartes */
+.mini-cards {
+    display: flex;
+    flex-direction: column; /* par défaut colonne pour mobile */
+    gap: 12px;
+    margin-top: 12px;
+}
+
+/* Chaque mini-card */
+.mini-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Avatar */
+.mini-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Texte à droite */
+.mini-card-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.mini-card-text h4 {
+    font-size: 0.95rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.mini-card-text p {
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.mini-card-text h4,
+.mini-card-text p {
+    color: white; /* texte blanc pour mini-cards */
+}
+
+
+/* Responsive : sous 768px on met les cartes sous le texte */
+@media (max-width: 768px) {
+    .regles-content {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    .card-carousel {
+        width: 100%; /* cartes prennent toute la largeur */
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .card {
+        height: auto; /* s’adapte au contenu */
+        position: relative;
+        inset: auto;
+        margin-bottom: 20px;
+        opacity: 1 !important; /* toutes visibles pour mobile */
+        transform: translateY(0) scale(1);
+        z-index: auto;
+    }
+
+    .card:nth-child(2),
+    .card:nth-child(3) {
+        transform: none;
+        opacity: 1;
+        margin-top: 20px;
+    }
+
+    .card-controls {
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+
+.mini-discussion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+/* Conteneurs de chat */
+.chat {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Joueur à gauche */
+.chat-left {
+    flex-direction: row;
+}
+
+/* Joueur à droite */
+.chat-right {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+/* Avatar */
+.chat-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Bulle de texte */
+.chat-bubble {
+    max-width: 180px;
+    padding: 8px 12px;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    line-height: 1.2;
 }
 

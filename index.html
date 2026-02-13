@@ -79,75 +79,154 @@
                 Recevez un mot secret et démasquez les Undercover qui se cachent parmi les Civils !
                 Êtes-vous vous-même Undercover ou Mr. White ? Ne vous faites pas repérer...
             </p>
-        </div>
-
-        <div class="regles-image">
-        <div class="card-carousel">
-            <div class="card-stack">
-                <img src="images/card1.png" class="card active">
-                <img src="images/card2.png" class="card">
-                <img src="images/card3.png" class="card">
-                <img src="images/card4.png" class="card">
-            </div>
-
-            <div class="card-controls">
-                <button class="arrow left">◀</button>
-                <button class="arrow right">▶</button>
-            </div>
-        </div>
-    </div>
-
-
-    </div>
-</section>
-
-
-<section class="paper">
-    <section class="section reveal" id="roles">
-        <h2>Les rôles</h2>
-
-        <div class="roles">
-            <div class="role reveal">
-                <img src="images/role-civil.png" alt="Rôle Civils" class="role-img">
-                <h3>Les Civils</h3>
-                <p>
-                    <strong>But : </strong> Les Civils gagne si tous les Undercovers et le Mr. White ont été éliminés
-                </p>
-            </div>
-
-            <div class="role reveal">
-                <img src="images/role-undercover.png" alt="Rôle Undercover" class="role-img">
-                <h3>Les Undercovers</h3>
-                <p>
-                    <strong>But : </strong> Les Undercovers gagne si l'un d'eux ne s'est pas fait éliminer
-                </p>
-            </div>
-
-            <div class="role reveal">
-                <img src="images/role-white.png" alt="Rôle Mr. White" class="role-img">
-                <h3>Mr. White</h3>
-                <p>
-                    <strong>But : </strong> Mr. White gagne s'il a deviné le mot secret des civils ou s'il n'a pas été éliminé
-                </p>
-            </div>
-        </div>
-        <div class="center">
+            <div class="center">
             <a href="how-to-play.html" class="btn">
                 Règles détaillées
             </a>
         </div>
+    </div>
 
-    </section>
+   <div class="regles-image">
+    <div class="card-carousel">
+        <div class="card-stack">
+
+            <!-- Carte 1 -->
+            <div class="card active">
+                <h3>Étape 1</h3>
+                <h4 class="card-title">Distribuez</h4>
+                <p>Un mot secret vous est attribué, il définit votre rôle dans la partie.</p>
+
+                <!-- Mini-cartes flex -->
+                <div class="mini-cards">
+                    <div class="mini-card">
+                        <div>
+                            <img src="images/role-civil.png" alt="Civil Image">
+                        </div>
+                        <div class="mini-card-text">
+                            <h4>Les Civils</h4>
+                            <p>Ils ont le bon mot secret, exemple "Cabane"</p>
+                        </div>
+                    </div>
+                    <div class="mini-card">
+                        <div>
+                            <img src="images/role-undercover.png" alt="Undercover Image">
+                        </div>
+                        <div class="mini-card-text">
+                            <h4>Les Undercovers</h4>
+                            <p>Ils ont un autre mot secret, ici "Tente"</p>
+                        </div>
+                    </div>
+                    <div class="mini-card">
+                        <div>
+                             <img src="images/role-white.png" alt="Mr. White Image">
+                        </div>
+                        <div class="mini-card-text">
+                            <h4>Mr. White</h4>
+                            <p>Il n'a aucun mot mais ne doit pas se faire repérer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="card">
+                <h3>Étape 2</h3>
+                <h4 class="card-title"> Obersevez</h4>
+                <p>À tour de rôle, chaque joueur donne un mot-indice en lien avec son mot secret.</p>
+                <h5>Mot secret : "Cabane"</h5>
+
+                <div class="mini-discussion">
+                    <!-- Joueur 1 à gauche -->
+                    <div class="chat chat-left">
+                        <img src="images/avatar1.png" alt="Joueur 1" class="chat-avatar">
+                        <div class="chat-bubble">Koh Lanta</div>
+                    </div>
+
+                    <!-- Joueur 2 à droite -->
+                    <div class="chat chat-right">
+                        <img src="images/avatar2.png" alt="Joueur 2" class="chat-avatar">
+                        <div class="chat-bubble">Habitat</div>
+                    </div>
+
+                    <!-- Joueur 3 à gauche -->
+                    <div class="chat chat-left">
+                        <img src="images/avatar3.png" alt="Joueur 3" class="chat-avatar">
+                        <div class="chat-bubble">Extérieur</div>
+                    </div>
+                </div>
+                <p>
+                    Le but est de repérer le joueur qui a
+                    un mot secret différent du sien,
+                    ou aucun pour le Mr. White
+                </p>
+            </div>
+
+            <!-- Carte 3 -->
+            <div class="card">
+                <h3>Étape 3</h3>
+                <h4 class="card-title">Débattez</h4>
+                <p>Vous avez débattre entre vous puis votre éliminer le potentiel intrus.
+                    C'est le moment de former des alliances et de démasquer les intrus
+                </p>
+                <img src="" alt="vote">
+            </div>
+
+             <!-- Carte 4 -->
+            <div class="card">
+                <h3>Étape 4</h3>
+                <h4 class="card-title">Recommencez</h4>
+                <p>Après élimination d'un joueur la partie continue jusqu' à ce que tous les intrus soient démasqués.</p>
+            </div>
+        </div>
+
+        <!-- Flèches centrées -->
+        <div class="card-controls">
+            <button class="arrow left">←</button>
+            <button class="arrow right">→</button>
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+<section class="section reveal paper" id="roles">
+    <h2>Les rôles</h2>
+
+    <div class="roles">
+        <div class="role reveal">
+            <img src="images/role-civil.png" alt="Rôle Civils" class="role-img">
+            <h3>Les Civils</h3>
+            <p>
+                <strong>But : </strong> Les Civils gagne si tous les Undercovers et le Mr. White ont été éliminés
+            </p>
+        </div>
+        <div class="role reveal">
+            <img src="images/role-undercover.png" alt="Rôle Undercover" class="role-img">
+            <h3>Les Undercovers</h3>
+            <p>
+                <strong>But : </strong> Les Undercovers gagne si l'un d'eux ne s'est pas fait éliminer
+            </p>
+        </div>
+
+        <div class="role reveal">
+            <img src="images/role-white.png" alt="Rôle Mr. White" class="role-img">
+            <h3>Mr. White</h3>
+            <p>
+                <strong>But : </strong> Mr. White gagne s'il a deviné le mot secret des civils ou s'il n'a pas été éliminé
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="footer-download reveal regles">
+    <h3>Préparez-vous à des heures de divertissement !</h3>
+    <a href="https://play.google.com/store/apps/details?id=fr.mattis.undercover" target="_blank" class="btn pulse reveal">
+        Télécharger l’application
+    </a>
 </section>
 
 <footer>
-    <div class="footer-download reveal">
-        <h3>Prêt à jouer ?</h3>
-        <a href="https://play.google.com/store/apps/details?id=fr.mattis.undercover" target="_blank" class="btn">
-            Télécharger l’application
-        </a>
-    </div>
-
     <nav class="footer-links">
         <a href="team.html">Notre équipe</a>
         <a href="privacy-policy.html">Privacy Policy</a>
