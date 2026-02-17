@@ -36,7 +36,7 @@ Images – Illustrations, avatars, icônes
 │   ├── logo.png
 │   └── ...
 ├── README.md               # Ce fichier
-└── ...`
+└── ...
 ```
 
 ## Installation et utilisation
