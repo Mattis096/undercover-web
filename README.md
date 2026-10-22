@@ -69,6 +69,5 @@ Ce projet est sous MIT License – consultez le fichier LICENSE pour plus de dé
 
 ## Auteur
 
-Mattis Rischard / MR Digital Studio
-Email : rischard.mattis@gmail.com
+MR Digital Studio
 GitHub : github.com/Mattis096
